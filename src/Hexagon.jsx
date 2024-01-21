@@ -1,9 +1,7 @@
 export default function Hexagon({height, position, color}) {
     return(
         <mesh 
-        translateX={position.x}
-        translateY={position.y}
-        translateZ={height * 0.5}
+            position={position}
         >
             <cylinderGeometry args={[1, 1, height, 6, 1, false]} />
             <meshStandardMaterial color={color} />

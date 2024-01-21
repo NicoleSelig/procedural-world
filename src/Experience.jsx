@@ -6,6 +6,8 @@ import Hexagon from './Hexagon.jsx'
 import { Stats, Environment } from '@react-three/drei'
 import { Canvas, useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader'
+import { Vector3, AxesHelper } from 'three'
+import Terrain from './Terrain.jsx'
 
 // export default function App() {
 //   const gltf = useLoader(GLTFLoader, '/models/monkey.glb')
@@ -45,11 +47,11 @@ export default function Experience()
 
     return <>
         <orbitControls args={ [ camera, gl.domElement ] } />
-        <Environment files="./images/scythian_tombs_2_4k.exr" />
-        {/* <directionalLight position={ [ 1, 2, 3 ] } intensity={ 4.5 } />
-        <ambientLight intensity={ 1.5 } /> */}
+        <Environment files="./images/scythian_tombs_2_4k.exr" background={true} />
+        {/* The X axis is red, the Y axis is green and the Z axis is blue. */}
+        <axesHelper args={[5]}/>
 
-        <Hexagon height={4} position={{x: 4, y: 5}} color={'purple'}/>
+        <Terrain/>
 
         <mesh position-y={ - 1 } rotation-x={ - Math.PI * 0.5 } scale={ 10 }>
             <planeGeometry />

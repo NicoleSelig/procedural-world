@@ -32,13 +32,15 @@ export default function Experience()
 
     const cubeRef = useRef()
     const groupRef = useRef()
+    camera.position.set(-35, 37, 37)
 
     useFrame((state, delta) =>
     {
         // console.log(state.clock.elapsedTime)
         // const angle = state.clock.elapsedTime
-        // state.camera.position.x = Math.sin(angle) * 8
-        // state.camera.position.z = Math.cos(angle) * 8
+        // state.camera.position.y = 15
+        // state.camera.position.z = 15
+        // console.log(camera.position)
 
         // cubeRef.current.rotation.y += delta
         // groupRef.current.rotation.y += delta
@@ -48,7 +50,7 @@ export default function Experience()
         <orbitControls args={ [ camera, gl.domElement ] } />
         <Environment files="./images/scythian_tombs_2_4k.exr" background={true} />
         {/* The X axis is red, the Y axis is green and the Z axis is blue. */}
-        <axesHelper args={[5]}/>
+        <axesHelper args={[30]}/>
         <Terrain/>
     </>
 }

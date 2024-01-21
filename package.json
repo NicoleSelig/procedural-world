@@ -17,6 +17,7 @@
     "honeycomb-grid": "^4.1.5",
     "react": "18.2",
     "react-dom": "18.2",
+    "simplex-noise": "^4.0.1",
     "three": "^0.158.0"
   }
 }

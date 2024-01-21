@@ -50,13 +50,6 @@ export default function Experience()
         <Environment files="./images/scythian_tombs_2_4k.exr" background={true} />
         {/* The X axis is red, the Y axis is green and the Z axis is blue. */}
         <axesHelper args={[5]}/>
-
         <Terrain/>
-
-        <mesh position-y={ - 1 } rotation-x={ - Math.PI * 0.5 } scale={ 10 }>
-            <planeGeometry />
-            <meshStandardMaterial color="greenyellow" />
-        </mesh>
-
     </>
 }

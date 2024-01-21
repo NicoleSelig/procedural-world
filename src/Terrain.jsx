@@ -7,7 +7,7 @@ function tileToPosition(tileX, tileY) {
 }
 
 // // TODO: figure out how to make a circle
-function makeTerrain(terrainSize = 5) {
+function makeTerrain(terrainSize = 15) {
     const hexagons = []
     for(let i=-terrainSize; i<=terrainSize, i++;) {
         for(let j=-terrainSize; j<=terrainSize, j++;) {
@@ -22,9 +22,9 @@ function makeTerrain(terrainSize = 5) {
 
 export default function Terrain() {
     return(
-        <>
+        <mesh>
             {makeTerrain()}
-        </> 
+        </mesh> 
     )
 }
            

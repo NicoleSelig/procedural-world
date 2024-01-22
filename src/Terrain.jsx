@@ -27,7 +27,6 @@ function makeTerrain(terrainSize, maxHeight) {
         for(let j=-terrainSize; j<=terrainSize, j++;) {
             const height = Math.pow((noise2d(i * 0.1, j * 0.1) + 1) * 0.5, 1.5) * maxHeight
             let position = tileToPosition(j, i, terrainSize, height)
-            // color(getColor(height))
             hexagons.push(<Hexagon height={height} position={position} color={getColor(height)}/>)
         }
     }

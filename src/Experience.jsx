@@ -9,20 +9,8 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader'
 import { Vector3, AxesHelper } from 'three'
 import Terrain from './Terrain.jsx'
 
-// export default function App() {
-//   const gltf = useLoader(GLTFLoader, '/models/monkey.glb')
-
-//   return (
-//     <Canvas camera={{ position: [-0.5, 1, 2] }}>
-//       <Environment files="/img/venice_sunset_1k.hdr" background blur={0.5} />
-//       <directionalLight position={[3.3, 1.0, 4.4]} intensity={4} />
-//       <primitive object={gltf.scene} position={[0, 1, 0]} />
-//       <OrbitControls target={[0, 1, 0]} autoRotate />
-//       <axesHelper args={[5]} />
-//       <Stats />
-//     </Canvas>
-//   )
-// }
+const MAX_SIZE = 40
+const MAX_HEIGHT = 10
 
 extend({ OrbitControls })
 
@@ -47,10 +35,10 @@ export default function Experience()
     })
 
     return <>
-        <orbitControls args={ [ camera, gl.domElement ] } />
-        <Environment files="./images/scythian_tombs_2_4k.exr" background={true} />
+        <orbitControls args={ [ camera, gl.domElement ] } /> 
+        <Environment files="./images/scythian_tombs_2_4k.exr"/>
         {/* The X axis is red, the Y axis is green and the Z axis is blue. */}
         <axesHelper args={[30]}/>
-        <Terrain/>
+        <Terrain size={MAX_SIZE} maxHeight={MAX_HEIGHT}/>
     </>
 }

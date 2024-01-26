@@ -15,7 +15,7 @@ function getColor(height) {
     console.log(height)
     if (height >= MIN_SNOW_HEIGHT) return 'white'
     if (height >= MIN_MOUNTAIN_HEIGHT) return 'brown'
-    if (height >= MIN_GRASS_HEIGHT) return 'green'
+    if (height >= MIN_GRASS_HEIGHT) return 'greenyellow'
     return 'blue'
 }
 
